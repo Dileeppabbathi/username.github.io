@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dileep Pabbathi · Data Scientist</title>
+  <meta name="description" content="Portfolio of Dileep Pabbathi — Data Science MS @ ASU. Machine Learning, Deep Learning, Computer Vision, NLP, and Computational Social Science." />
+  <meta property="og:title" content="Dileep Pabbathi · Data Scientist" />
+  <meta property="og:description" content="ML/DL • Computer Vision • NLP • Computational Social Science" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --bg:#0b0b10;--panel:#111219;--panel-2:#0f1016;--text:#e7e9ee;--muted:#a7adbb;--brand:#6d7cff;--brand-2:#9b6dff;--line:#232635;--ok:#22c55e;
+      --radius:18px;--shadow:0 8px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 24px}
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(11,11,16,.9),rgba(11,11,16,.6) 60%,rgba(11,11,16,0));backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.2px}
+    .logo-badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;font-weight:800}
+    .nav-links{display:flex;gap:20px}
+    .nav-links a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+    .nav-links a:hover{background:rgba(157,167,255,.08);color:#fff}
+    /* Hero */
+    .hero{padding:72px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:28px}
+    .title{font-size:clamp(28px,4vw,48px);line-height:1.05;margin:6px 0 12px;font-weight:800}
+    .subtitle{color:var(--muted);font-size:clamp(14px,1.6vw,16px)}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:linear-gradient(135deg,rgba(109,124,255,.18),rgba(155,109,255,.18));border:1px solid rgba(157,167,255,.25);padding:8px 12px;border-radius:999px;color:#cfd3ff;font-weight:600}
+    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:12px;border:1px solid #2a2e3f;background:var(--panel);display:inline-flex;align-items:center;gap:10px}
+    .btn:hover{border-color:#3a3f56;transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));border-color:transparent;color:#fff}
+    .badge{display:inline-flex;gap:8px;align-items:center;color:#a7ffca;font-size:12px}
+    .panel{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-card{padding:20px}
+    .hero-card h3{margin:0 0 8px;font-size:14px;color:var(--muted)}
+    .stat{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px dashed #232535}
+    .stat:last-child{border-bottom:0}
+    .stat strong{font-size:18px}
+    /* Sections */
+    section{padding:56px 0}
+    .section-title{font-size:24px;margin:0 0 18px;font-weight:800}
+    .grid{display:grid;gap:16px}
+    .grid.cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{padding:18px}
+    .muted{color:var(--muted)}
+    .item{padding:18px;border:1px dashed #2a2f46;border-radius:14px}
+    .k{display:inline-block;margin:6px 6px 0 0;padding:8px 10px;border:1px solid #34384e;border-radius:12px;color:#cbd0e7;background:#121423;font-size:13px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    /* Timeline */
+    .timeline{position:relative;margin-top:8px}
+    .timeline:before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),var(--brand-2))}
+    .t-item{position:relative;padding-left:32px;margin:12px 0}
+    .t-item:before{content:"";position:absolute;left:4px;top:.5rem;width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 0 0 4px rgba(118,109,255,.15)}
+    .t-head{display:flex;justify-content:space-between;gap:8px}
+    .t-role{font-weight:700}
+    .t-meta{color:var(--muted)}
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid #1b1e2b;color:var(--muted)}
+    .cols{display:grid;grid-template-columns:1.2fr 2fr;gap:24px}
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid,.cols,.grid.cards{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-badge">DP</div>
+        <div>
+          <div style="font-size:14px;color:var(--muted);font-weight:700;letter-spacing:.08em">DATA SCIENTIST</div>
+          <div>Dileep Pabbathi</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="pill">MS Data Science · Arizona State University</span>
+          <h1 class="title">Building useful ML systems — from <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">idea</span> to <span style="background:linear-gradient(135deg,#22c55e,#a7ffca);-webkit-background-clip:text;background-clip:text;color:transparent">impact</span>.</h1>
+          <p class="subtitle">Machine Learning · Deep Learning · Computer Vision · NLP · Computational Social Science</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn" href="CV.pdf" download>Download CV</a>
+          </div>
+          <div class="row" style="margin-top:16px">
+            <span class="badge">📍 Tempe, AZ</span>
+            <span class="badge">🎓 ASU</span>
+            <span class="badge">✉️ <a href="mailto:dileeppmails@gmail.com">dileeppmails@gmail.com</a></span>
+          </div>
+        </div>
+        <aside class="panel hero-card">
+          <h3>At a glance</h3>
+          <div class="stat"><span>Publication</span><strong>IEEE (2024)</strong></div>
+          <div class="stat"><span>Undergrad GPA</span><strong>3.66 / 4.00</strong></div>
+          <div class="stat"><span>Focus Areas</span><strong>ML · CV · NLP</strong></div>
+          <div class="stat"><span>Looking for</span><strong>Research/DS roles</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container cols panel card">
+        <div>
+          <h2 class="section-title">About</h2>
+          <p class="muted">I'm a Data Science master's student at Arizona State University, building models that turn complex, multi‑modal data into decisions. My research background spans hyperspectral imaging for precision agriculture and practical ML systems across CV and NLP. I enjoy clean evaluation, thoughtful feature engineering, and communicating results with clarity.</p>
+        </div>
+        <div class="item">
+          <strong>Education</strong>
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-head"><span class="t-role">M.S., Data Science</span><span class="t-meta">Aug 2024 – Present · ASU</span></div>
+              <div class="muted">Tempe, Arizona</div>
+            </div>
+            <div class="t-item">
+              <div class="t-head"><span class="t-role">B.Tech, CSE (GPA 3.66/4.00)</span><span class="t-meta">Aug 2020 – May 2024 · SRM IST</span></div>
+              <div class="muted">Chennai, India</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / RESEARCH -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Research Experience</h2>
+        <div class="panel card">
+          <div class="t-item" style="margin:0">
+            <div class="t-head"><span class="t-role">Undergraduate Researcher — Precision Agriculture</span><span class="t-meta">Jan 2023 – May 2024 · SRM IST</span></div>
+            <ul class="muted" style="margin:8px 0 0 18px;line-height:1.8">
+              <li>Developed end‑to‑end ML pipeline for crop type/damage classification using DESIS hyperspectral imagery.</li>
+              <li>Designed Wavelet CNN (Wa‑CNN) features; applied LSTM for temporal patterns across seasons.</li>
+              <li>Benchmarked Random Forest, KNN, SVM, GNB, AdaBoost; best model KNN reached <strong>83.03% accuracy</strong>.</li>
+              <li>Led EDA & feature engineering on large‑scale agricultural datasets; presented findings to academic audiences.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+        <div class="grid">
+          <article class="panel card">
+            <div class="muted">IEEE Conference Proceedings — 2024</div>
+            <h3 style="margin:.25rem 0 .5rem">Precision Agriculture: Crop Type Classification using Advanced ML Algorithms</h3>
+            <p class="muted">Developed ML models (CNN, LSTM, RF, KNN, SVM) for crop damage prediction on DESIS imagery; best model KNN achieved 83.03% accuracy. Included extensive feature engineering and temporal analysis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="grid cards">
+          <div class="panel card">
+            <h3>Crop Damage Prediction System</h3>
+            <p class="muted">End‑to‑end pipeline integrating hyperspectral imagery, environmental variables, and historical records with cross‑validated model selection (accuracy, precision, recall, F1).</p>
+            <div class="row">
+              <span class="k">Hyperspectral</span><span class="k">KNN/SVM/RF</span><span class="k">EDA</span>
+            </div>
+          </div>
+          <div class="panel card">
+            <h3>Deep Learning for Image Classification</h3>
+            <p class="muted">CNNs with transfer learning (ResNet, VGG, EfficientNet), regularization and augmentation to improve multi‑class performance.</p>
+            <div class="row"><span class="k">PyTorch</span><span class="k">Transfer Learning</span><span class="k">Augmentation</span></div>
+          </div>
+          <div class="panel card">
+            <h3>Sentiment Analysis Pipeline</h3>
+            <p class="muted">Traditional ML vs LSTM vs BERT on large text corpora; TF‑IDF and embeddings‑based features; clear evaluation and model comparison.</p>
+            <div class="row"><span class="k">NLP</span><span class="k">BERT</span><span class="k">LSTM</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="grid cards">
+          <div class="panel card">
+            <strong>Programming</strong>
+            <div class="row"><span class="k">Python</span><span class="k">R</span><span class="k">SQL</span><span class="k">MATLAB</span></div>
+          </div>
+          <div class="panel card">
+            <strong>ML / DL</strong>
+            <div class="row"><span class="k">TensorFlow</span><span class="k">PyTorch</span><span class="k">Keras</span><span class="k">Scikit‑learn</span><span class="k">XGBoost</span></div>
+          </div>
+          <div class="panel card">
+            <strong>Data Analysis & Viz</strong>
+            <div class="row"><span class="k">Pandas</span><span class="k">NumPy</span><span class="k">SciPy</span><span class="k">Matplotlib</span><span class="k">Seaborn</span><span class="k">Plotly</span></div>
+          </div>
+          <div class="panel card">
+            <strong>NLP</strong>
+            <div class="row"><span class="k">NLTK</span><span class="k">spaCy</span><span class="k">Transformers</span><span class="k">Gensim</span><span class="k">BERT</span></div>
+          </div>
+          <div class="panel card">
+            <strong>Big Data</strong>
+            <div class="row"><span class="k">Apache Spark</span><span class="k">Hadoop</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container cols panel card">
+        <div>
+          <h2 class="section-title">Contact</h2>
+          <p class="muted">Open to research collaborations, internships, and data science roles. The fastest way to reach me is email.</p>
+          <div class="row" style="margin-top:8px">
+            <a class="btn primary" href="mailto:dileeppmails@gmail.com">Email Me</a>
+            <a class="btn" href="tel:+16232021135">Call</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="muted">Direct</div>
+          <div><strong>+1‑623‑202‑1135</strong></div>
+          <div><a class="muted" href="mailto:dileeppmails@gmail.com">dileeppmails@gmail.com</a></div>
+          <div class="muted">Tempe, Arizona, USA</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="y"></span> Dileep Pabbathi. All rights reserved.</div>
+      <div class="muted">Built with semantic HTML, responsive CSS, and zero JS frameworks.</div>
+    </div>
+  </footer>
+
+  <!-- Small helper JS -->
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dileep Pabbathi",
+    "jobTitle": "Data Scientist",
+    "email": "mailto:dileeppmails@gmail.com",
+    "telephone": "+1-623-202-1135",
+    "address": {"@type":"PostalAddress","addressLocality":"Tempe","addressRegion":"AZ","addressCountry":"US"},
+    "alumniOf": [
+      {"@type":"CollegeOrUniversity","name":"Arizona State University"},
+      {"@type":"CollegeOrUniversity","name":"SRM Institute of Science and Technology"}
+    ],
+    "knowsAbout": [
+      "Machine Learning","Deep Learning","Computer Vision","Natural Language Processing",
+      "Computational Social Science","Misinformation Detection","Social Network Analysis"
+    ]
+  }
+  </script>
+</body>
+</html>
